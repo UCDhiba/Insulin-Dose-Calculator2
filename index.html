@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">حاسبة جرعة الإنسولين</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="heading">حاسبة جرعة الإنسولين</h1>
+
+    <!-- زر تغيير اللغة -->
+    <button id="languageToggle" onclick="toggleLanguage()">English</button>
+
+    <form id="insulinForm">
+      <label for="carbs" id="carbsLabel">عدد الكربوهيدرات (غرام):</label>
+      <input type="number" id="carbs" name="carbs" required>
+
+      <label for="currentSugar" id="currentSugarLabel">السكر الحالي (ملغ/dL):</label>
+      <input type="number" id="currentSugar" name="currentSugar" required>
+
+      <label for="targetSugar" id="targetSugarLabel">السكر المستهدف (ملغ/dL):</label>
+      <input type="number" id="targetSugar" name="targetSugar" required>
+
+      <label for="insulinSensitivity" id="insulinSensitivityLabel">حساسية الإنسولين (غرام لكل 1 وحدة):</label>
+      <input type="number" id="insulinSensitivity" name="insulinSensitivity" required>
+
+      <button type="submit" id="submitButton">احسب</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
